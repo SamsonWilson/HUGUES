@@ -1,12 +1,8 @@
-<<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Inscription</title>
-  <link rel="stylesheet" href="styles.css">
-  </head>
-<body>
-  <div class="container">
+<?php 
+ob_start()
+?>
+
+<div class="container">
     <form class="registration-form">
       <h2> Reserver une Vite  </h2>
       <label for="username"> Nom:</label>
@@ -28,5 +24,12 @@
 
     </form>
   </div>
-</body>
-</html>
+
+
+
+
+<?php
+$client = ob_get_clean();
+//$titre = " Bibliotheque MGA ";
+require "template.php";
+?>
